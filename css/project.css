@@ -1,0 +1,63 @@
+html{ overflow: hidden; }
+/*Icone du menu*/
+.clock{ width: 24px; height: 24px; background-color: transparent; box-shadow: inset 0px 0px 0px 2px #FFFFFF; border-radius: 50%; position: absolute; top: 20px; left: 20px; z-index: 1;}
+.clock:after, .clock:before{ position: absolute; content:""; background-color: #FFFFFF; }
+.clock:after{ width: 10px; height: 2px; top: 11px; left: 11px; -webkit-transform-origin: 1px 1px; -moz-transform-origin: 1px 1px; transform-origin: 1px 1px; -webkit-animation: minutesAnimation 2s linear infinite; -moz-animation: minutesAnimation 2s linear infinite; animation: minutesAnimation 2s linear infinite; }
+.clock:before{ width: 8px; height: 2px; top: 11px; left: 11px; -webkit-transform-origin: 1px 1px; -moz-transform-origin: 1px 1px; transform-origin: 1px 1px; -webkit-animation: hoursAnimation 8s linear infinite; -moz-animation: hoursAnimation 8s linear infinite; animation: hoursAnimation 8s linear infinite; }
+
+/*Animation de l'horloge*/
+@-webkit-keyframes minutesAnimation{ 0% {-webkit-transform:rotate(0deg)} 100% {-webkit-transform:rotate(360deg)} }
+@-moz-keyframes minutesAnimation{ 0% {-moz-transform:rotate(0deg)} 100% {-moz-transform:rotate(360deg)} }
+@keyframes minutesAnimation{ 0% {transform:rotate(0deg)} 100% {transform:rotate(360deg)} }
+@-webkit-keyframes hoursAnimation{ 0% {-webkit-transform:rotate(0deg)} 100% {-webkit-transform:rotate(360deg)} }
+@-moz-keyframes hoursAnimation{ 0% {-moz-transform:rotate(0deg)} 100% {-moz-transform:rotate(360deg)} }
+@keyframes hoursAnimation{ 0% {transform:rotate(0deg)} 100% {transform:rotate(360deg)}}
+
+/*Animation de l'onde pour les couleurs*/
+@keyframes iconeCouleur { 0% { width: 0; height: 0; opacity: 1; } 100% { width: 30px; height: 30px; opacity: 0; } }
+.iconeCouleur { position: absolute; bottom: 45px; right: 20px; width: 30px; height: 30px; }
+.iconeCouleur:before,
+.iconeCouleur:after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; margin: auto; border-radius: 50%; border: 1px solid #fff; }
+.iconeCouleur:before { animation: iconeCouleur 2s linear infinite 0s; }
+.iconeCouleur:after { animation: iconeCouleur 2s linear infinite 1s; }
+
+/*Curseur souris*/
+.pointer { cursor: pointer; }
+
+/*Contenu textuel*/
+.auteur { bottom: 10px; left: 10px; font-size: medium; text-orientation: upright; writing-mode: tb-rl; letter-spacing: 0.1px; position: fixed; }
+.competence { bottom: 0; right: 20px; font-size: medium; margin-top: 0; margin-bottom: 0; }
+.texte { position: absolute; width:fit-content; width:-moz-fit-content; text-align: center; z-index: 10;}
+.white { color: #FFFFFF; font-family: 'Bungee Hairline'; }
+
+/*Images*/
+.slide { top: 20px; position: fixed; width: 24px; height: 24px; }
+.next { right: 20px; }
+.previous { right: 55px; }
+
+/*Contenu du menu non affiché de base*/
+.navbarContent { display: none;}
+
+/*Forcer les photos en noir et blanc*/
+.blackWhite { background-blend-mode: difference; background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px); filter: grayscale(1); }
+
+/*Créer un effet d'hallucination sur les photos*/
+.hallucination-effect { position: relative; overflow: hidden; background-color: magenta; background-blend-mode: screen; }
+.hallucination-effect:before, .hallucination-effect:after { display: block; content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: inherit; mix-blend-mode: multiply; transform: scale(1.05); }
+.hallucination-effect:before { background-color: yellow; background-blend-mode: screen; transform-origin: top left; }
+.hallucination-effect:after { background-color: cyan; background-blend-mode: screen; transform-origin: bottom right; }
+
+
+@media screen and (max-width: 768px) {
+    .fragment-wrap {
+        margin: 0;
+        width: 70vw;
+    }
+    .text {
+        left: 0;
+        width: 100%;
+    }
+    .section {
+        padding: 50px;
+    }
+}

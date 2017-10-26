@@ -1,0 +1,114 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inconsolata', monospace;
+	color: #FFFFFF;
+	background: #000000;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #c61dc8;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #333;
+	text-decoration: underline;
+}
+
+.section {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding: 40px;
+}
+
+.section--intro {
+	background-size: 40px;
+}
+
+
+
+/* Content */
+
+.content {
+	margin: auto;
+	/*max-width: 1200px;*/
+	/*min-height: 600px;*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	flex: none;
+	position: relative;
+}
+
+.title {
+	position: absolute;
+	font-size: 8vw;
+	margin: 0;
+	pointer-events: none;
+	bottom: 10%;
+	left: 35%;
+	background: black;
+}
+
+.text {
+	font-size: 1.15em;
+	position: absolute;
+	width: 50%;
+	bottom: calc(10% + 8vw);
+	left: 40%;
+}
+
+.deco-bg {
+	line-height: 1.6;
+}
+
+.deco-bg--color-1 {
+	padding: 5px;
+	background: -webkit-linear-gradient(bottom, #807cfd 90%, transparent 90%, transparent);
+	background: linear-gradient(to top, #807cfd 90%, transparent 90%, transparent);
+}
+
+.deco-bg--color-2 {
+	padding: 5px;
+	background: -webkit-linear-gradient(bottom, #fdf164 90%, transparent 90%, transparent);
+	background: linear-gradient(to top, #fdf164 90%, transparent 90%, transparent);
+}
+
+.deco-bg--color-3 {
+	padding: 5px;
+	background: -webkit-linear-gradient(bottom, #93b3f2 90%, transparent 90%, transparent);
+	background: linear-gradient(to top, #93b3f2 90%, transparent 90%, transparent);
+}
+
+.deco-bg--color-4 {
+	padding: 5px;
+	background: -webkit-linear-gradient(bottom, #c2f3b0 90%, transparent 90%, transparent);
+	background: linear-gradient(to top, #c2f3b0 90%, transparent 90%, transparent);
+}
+
+.deco-bg--color-5 {
+	padding: 5px;
+	background: -webkit-linear-gradient(bottom, #ffb857 90%, transparent 90%, transparent);
+	background: linear-gradient(to top, #ffb857 90%, transparent 90%, transparent);
+}
